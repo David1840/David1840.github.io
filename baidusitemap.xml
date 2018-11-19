@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2018/08/28/Netty%E5%AD%A6%E4%B9%A0-%E4%B8%80/</loc>
+    <lastmod>2018-11-19T05:12:08.000Z</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2018-08-29T12:53:51.000Z</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2018/08/28/Netty%E5%AD%A6%E4%B9%A0-%E4%B8%80/</loc>
-    <lastmod>2018-08-28T12:50:04.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/08/24/Java%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%8F%8AGC%E5%9B%9E%E6%94%B6/</loc>
     <lastmod>2018-08-24T07:47:39.000Z</lastmod>
