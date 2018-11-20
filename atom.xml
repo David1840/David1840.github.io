@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-19T05:12:08.000Z</updated>
+  <updated>2018-11-20T10:05:53.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>音视频入门(一)</title>
+    <link href="http://yoursite.com/2018/11/19/FFmpeg%E5%85%A5%E9%97%A8-%E4%B8%80/"/>
+    <id>http://yoursite.com/2018/11/19/FFmpeg入门-一/</id>
+    <published>2018-11-19T11:55:56.000Z</published>
+    <updated>2018-11-20T10:05:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Android开发两年，真的是感觉Android应用层开发没什么前景了，于是打算在网络安全，智能硬件，音视频这几个方向发展，考虑了一段时间，最终决定选择音视频。理由就不说了，既然选择了就要好好学习了，今天就开始音视频的第一篇博客，从一些音视频的基础知识开始。</p><h2 id="音视频相关基础知识"><a href="#音视频相关基础知识" class="headerlink" title="音视频相关基础知识"></a>音视频相关基础知识</h2><h4 id="硬解和软解"><a href="#硬解和软解" class="headerlink" title="硬解和软解"></a>硬解和软解</h4><p>视频解码分为硬解和软解，所谓“软解”就是通过软件让 CPU 进行视频解码处理；而“硬解”是指不依赖于 CPU，通过专用的设备（子卡）单独完成视频解码，比如曾经的 VCD/DVD 解压卡、视频压缩卡都被冠以“硬解”的称号。现在实现高清硬解不需要额外的子卡，也不需要额外的投入，因为硬解码模块被整合在了 GPU 内部，而目前主流的显卡（包括整合显卡）都能支持硬解码。</p><p> “硬解”其实更需要软件的支持，只是基本不需要 CPU 参与运算，从而为系统节约了很多资源开销。</p><h4 id="RGB-和-YUV"><a href="#RGB-和-YUV" class="headerlink" title="RGB 和 YUV"></a>RGB 和 YUV</h4><p>RGB 指的是红绿蓝，应用还是很广泛的，比如显示器显示， bmp 文件格式中的像素值等；而 yuv 主要指亮度和两个色差信号，被称为 luminance 和 chrominance 他们的转化关系可以自己去查一下，我们视频里面基本上都是用yuv格式。</p><p>YUV文件格式又分很多种，如果算上存储格式，就更多了，比如 yuv444、 yuv422、 yuv411、 yuv420 等等，视频压缩用到的是 420 格式，这是 因为人眼对亮度更敏感些，对色度相对要差些。</p><h4 id="帧-Frame"><a href="#帧-Frame" class="headerlink" title="帧 Frame"></a>帧 Frame</h4><p>简单的理解帧就是为视频或者动画中的每一张画面，而视频和动画特效就是由无数张画面组合而成，每一张画面都是一帧。</p><h4 id="帧数-Frames"><a href="#帧数-Frames" class="headerlink" title="帧数 Frames"></a>帧数 Frames</h4><p>帧数其实就是为帧生成数量的简称，可以解释为静止画面的数量</p><h4 id="帧率-Frame-Rate"><a href="#帧率-Frame-Rate" class="headerlink" title="帧率 Frame Rate"></a>帧率 Frame Rate</h4><p>帧率(Frame rate) = 帧数(Frames)/时间(Time)，单位为帧每秒(f/s, frames per second, fps)</p><p>帧率是用于测量显示帧数的量度，测量单位为“每秒显示帧数”（ Frame per Second， FPS）或“赫兹”（ Hz），一般来说 FPS 用于描述视频、电子绘图或游戏每秒播放多少幀。</p><h4 id="FPS（-Frame-per-Second）每秒显示帧数"><a href="#FPS（-Frame-per-Second）每秒显示帧数" class="headerlink" title="FPS（ Frame per Second）每秒显示帧数"></a>FPS（ Frame per Second）每秒显示帧数</h4><p>FPS 是图像领域中的定义，是指画面每秒传输帧数，通俗来讲就是指动画或视频的画面数。 FPS 是测量用于保存、显示动态视频的信息数量。每秒钟帧数愈多，所显示的动作就会愈流畅。</p><h4 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h4><p>指视频成像产品所形成的图像大小或尺寸</p><h4 id="刷新率"><a href="#刷新率" class="headerlink" title="刷新率"></a>刷新率</h4><p>屏幕每秒画面被刷新的次数，分为垂直刷新率和水平刷新率，一般我们提到的都是指垂直刷新率，以赫兹(Hz)为单位，刷新率越高，图像就越稳定，图像显示就越自然清晰。</p><h4 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h4><p>编码的目的是压缩数据量，采用编码算法压缩冗余数据。常用的编码格式有:</p><ul><li>MPEG(MPEG-2  MPEG-4)</li><li>H.26X(H.263  H.264/AVC H.265/HEVC)<h4 id="码率"><a href="#码率" class="headerlink" title="码率"></a>码率</h4></li></ul><p>也就是比特率，比特率是单位时间播放连续的媒体(如压缩的音频和视频)的比特数量。比特率越高，带宽消耗得越多。</p><h4 id="DTS和PTS"><a href="#DTS和PTS" class="headerlink" title="DTS和PTS"></a>DTS和PTS</h4><ul><li>DTS: Decode Time Stamp,主要用于标示读入内存的比特流在什么时候开始送入解码器中进行解码。</li><li>PTS: Presentation Time Stamp,主要用于度量解码后的视频帧什么时候被显示出来。</li></ul><h4 id="FFmpeg"><a href="#FFmpeg" class="headerlink" title="FFmpeg"></a>FFmpeg</h4><p> FFmpeg 是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。 </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Android开发两年，真的是感觉Android应用层开发没什么前景了，于是打算在网络安全，智能硬件，音视频这几个方向发展，考虑了一段时间，最终决定选择音视频。理由就不说了，既然选择了就要好好学习了，今天就开始音视频的第一篇博客，从一些音视频的基础知识开始。&lt;/p&gt;
+&lt;h2
+      
+    
+    </summary>
+    
+      <category term="音视频" scheme="http://yoursite.com/categories/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
+    
+    
+      <category term="音视频" scheme="http://yoursite.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Netty学习(一)</title>
@@ -560,33 +586,6 @@
       <category term="多线程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
       <category term="同步" scheme="http://yoursite.com/tags/%E5%90%8C%E6%AD%A5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android Content Provider实现原理</title>
-    <link href="http://yoursite.com/2018/07/29/Android-Content-Provide%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/2018/07/29/Android-Content-Provide实现原理/</id>
-    <published>2018-07-29T12:34:11.000Z</published>
-    <updated>2018-07-26T07:42:42.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>ContentProvider(内容提供者)用于提供数据的统一访问格式，封装底层的具体实现。对于数据的使用者来说，无需知晓数据的来源是数据库、文件，或者网络，只需简单地使用ContentProvider提供的数据操作接口，也就是增(insert)、删(delete)、改(update)、查(query)四个过程。</p><h2 id="ContentProvider"><a href="#ContentProvider" class="headerlink" title="ContentProvider"></a>ContentProvider</h2><p>ContentProvider作为Android四大组件之一，并没有Activity那样复杂的生命周期，只有简单地onCreate过程。ContentProvider是一个抽象类，当实现自己的ContentProvider类，只需继承于ContentProvider，并且实现以下六个abstract方法即可：</p><ul><li>insert(Uri, ContentValues)：插入新数据；</li><li>delete(Uri, String, String[])：删除已有数据；</li><li>update(Uri, ContentValues, String, String[])：更新数据；</li><li>query(Uri, String[], String, String[], String)：查询数据；</li><li>onCreate()：执行初始化工作；</li><li>getType(Uri)：获取数据MIME类型。</li></ul><h2 id="ContentResolver"><a href="#ContentResolver" class="headerlink" title="ContentResolver"></a>ContentResolver</h2><p>其他app或者进程想要操作ContentProvider，则需要先获取其相应的ContentResolver，再利用ContentResolver类来完成对数据的增删改查操作</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver cr = getContentResolver();  <span class="comment">//获取ContentResolver</span></span><br><span class="line"><span class="built_in">Uri</span> uri = <span class="built_in">Uri</span>.parse(<span class="string">"content://com.gityuan.articles/android/3"</span>);</span><br><span class="line">Cursor cursor = cr.query(uri, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>, <span class="keyword">null</span>);  <span class="comment">//执行查询操作</span></span><br><span class="line">...</span><br><span class="line">cursor.close(); <span class="comment">//关闭</span></span><br></pre></td></tr></table></figure><h2 id="继承关系图"><a href="#继承关系图" class="headerlink" title="继承关系图"></a>继承关系图</h2><p><img src="/2018/07/29/Android-Content-Provide实现原理/content_provider.jpg" alt=""></p><h2 id="进程不存在"><a href="#进程不存在" class="headerlink" title="进程不存在"></a>进程不存在</h2><p><img src="/2018/07/29/Android-Content-Provide实现原理/content_provider_ipc.jpg" alt=""></p><ol><li>client进程：通过binder(调用AMS.getContentProviderImpl)向system_server进程请求相应的provider；</li><li>system进程：如果目标provider所对应的进程尚未启动，system_server会调用startProcessLocked来启动provider进程； 当进程启动完成，此时cpr.provider ==null，则system_server便会进入wait()状态，等待目标provider发布；</li><li>provider进程：进程启动后执行完attch到system_server，紧接着执行bindApplication；在这个过程会installProvider以及 publishContentProviders；再binder call到system_server进程；</li><li>system进程：再回到system_server，发布provider信息，并且通过notify机制，唤醒前面处于wait状态的binder线程；并将 getContentProvider的结果返回给client进程；</li><li>client进程：接着执行installProvider操作，安装provider的(包含对象记录,引用计数维护等工作)；</li></ol><h2 id="进程存在"><a href="#进程存在" class="headerlink" title="进程存在"></a>进程存在</h2><p><img src="/2018/07/29/Android-Content-Provide实现原理/content_provider_ipc2.jpg" alt=""></p><ul><li>Client进程在获取provider的过程,发现cpr为空,则调用scheduleInstallProvider来向provider所在进程发出一个oneway的binder请求,并进入wait()状态.</li><li>provider进程安装完provider信息,则notifyAll()处于等待状态的进程/线程;</li></ul><p>如果provider在publish完成之后, 这时再次请求该provider,那就便没有的最右侧的这个过程,直接在AMS.getContentProviderImpl之后便进入AT.installProvider的过程,而不会再次进入wait()过程.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;ContentProvider(内容提供者)用于提供数据的统一访问格式，封装底层的具体实现。对于数据的使用者来说，无需知晓数据的来源是数据库、文件，或者网络，只需简单地使用ContentProvider提供的数据操作接口，也就是增(insert)、删(delete)、改(u
-      
-    
-    </summary>
-    
-      <category term="Android系统" scheme="http://yoursite.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
-    
-      <category term="系统" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
