@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-21T04:12:54.000Z</updated>
+  <updated>2018-11-22T11:53:00.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>FFmpeg常用命令</title>
+    <link href="http://yoursite.com/2018/11/22/FFmpeg%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2018/11/22/FFmpeg常用命令/</id>
+    <published>2018-11-22T05:43:30.000Z</published>
+    <updated>2018-11-22T11:53:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>FFmpeg 是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。本文将简单介绍FFmpeg库的基本目录结构及其功能，然后会介绍一些常用的FFmpeg命令，了解FFmpeg到底能做些什么。</p><h3 id="音视频基本处理流程"><a href="#音视频基本处理流程" class="headerlink" title="音视频基本处理流程"></a>音视频基本处理流程</h3><p>对于音视频的处理基本遵循下面的流程：</p><p><img src="/2018/11/22/FFmpeg常用命令/ffmpeg23.png" alt=""></p><h3 id="FFmpeg目录及功能"><a href="#FFmpeg目录及功能" class="headerlink" title="FFmpeg目录及功能"></a>FFmpeg目录及功能</h3><table><thead><tr><th>libavcodec</th><th>提供了一系列编解码器的实现</th></tr></thead><tbody><tr><td>libavcodec</td><td>用于各种音视频封装格式的生成和解析，包括获取解码所需信息以生成解码上下文结构和读取音视频帧等功能</td></tr><tr><td>libavutil</td><td>包含一些公共的工具函数</td></tr><tr><td>libavutil</td><td>提供了各种音视频过滤器</td></tr><tr><td>libavdevice</td><td>提供了各种音视频过滤器</td></tr><tr><td>libswscale</td><td>提供了视频场景比例缩放、色彩映射转换功能</td></tr><tr><td>libswresample</td><td>实现了混音和重采样</td></tr></tbody></table><h3 id="信息查询命令"><a href="#信息查询命令" class="headerlink" title="信息查询命令"></a>信息查询命令</h3><table><thead><tr><th>命令</th><th>作用</th></tr></thead><tbody><tr><td>FFmpeg -version</td><td>显示版本</td></tr><tr><td>-formats</td><td>显示可用的格式（包括设备）</td></tr><tr><td>-demuxers</td><td>显示可用的demuxers</td></tr><tr><td>-muxers</td><td>显示可用的muxers</td></tr><tr><td>-devices</td><td>显示可用的设备</td></tr><tr><td>-codecs</td><td>显示已知的所有编解码器</td></tr><tr><td>-decoders</td><td>显示可用的解码器</td></tr><tr><td>-encoders</td><td>显示所有可用的编码器</td></tr><tr><td>-bsfs</td><td>显示可用的比特流filter</td></tr><tr><td>-protocols</td><td>显示可用的协议</td></tr><tr><td>-filters</td><td>显示可用的过滤器</td></tr><tr><td>-pix_fmts</td><td>显示可用的像素格式</td></tr><tr><td>-sample_fmts</td><td>显示可用的采样格式</td></tr><tr><td>-layouts</td><td>显示channel名称和标准channel布局</td></tr><tr><td>-colors</td><td>显示识别的颜色名称</td></tr></tbody></table><h2 id="设备列表"><a href="#设备列表" class="headerlink" title="设备列表"></a>设备列表</h2><p><code>ffmpeg -f avfoundation -list_devices true -i “”</code></p><p>查看Mac上支持的设备列表</p><h2 id="录屏"><a href="#录屏" class="headerlink" title="录屏"></a>录屏</h2><p><code>ffmpeg -f avfoundation -i 1 -r 30 out.yuv</code></p><p>-f 指定使用 avfoundation 采集数据。<br>-i 指定从哪儿采集数据，它是一个文件索引号。<br>-r 指定帧率。`</p><h2 id="录屏-声音"><a href="#录屏-声音" class="headerlink" title="录屏+声音"></a>录屏+声音</h2><p><code>ffmpeg -f avfoundation -i 1:0 -r 29.97 -c:v libx264 -crf 0 -c:a libfdk_aac -profile:a aac_he_v2 -b:a 32k out.flv</code></p><p>-i 1:0 冒号前面的 “1” 代表的屏幕索引号。冒号后面的”0”代表的声音索相号。<br>-c:v 与参数 -vcodec 一样，表示视频编码器。c 是 codec 的缩写，v 是video的缩写。<br>-crf 是 x264 的参数。 0 表式无损压缩。<br>-c:a 与参数 -acodec 一样，表示音频编码器。<br>-profile 是 fdk_aac 的参数。 aac_he_v2 表式使用 AAC_HE v2 压缩数据。<br>-b:a 指定音频码率。 b 是 bitrate的缩写, a是 audio的缩与。</p><h2 id="抽取音频和视频"><a href="#抽取音频和视频" class="headerlink" title="抽取音频和视频"></a>抽取音频和视频</h2><p><code>ffmpeg -i input_file -vcodec copy -an output_file_video　　//分离视频流</code><br><code>ffmpeg -i input_file -acodec copy -vn output_file_audio　　//分离音频流</code></p><p>vcodec: 指定视频编码器，copy 指明只拷贝，不做编解码。</p><p>an: a 代表视频，n 代表 no 也就是无音频的意思。</p><p>acodec: 指定音频编码器，copy 指明只拷贝，不做编解码。</p><p>vn: v 代表视频，n 代表 no 也就是无视频的意思。</p><h2 id="转格式"><a href="#转格式" class="headerlink" title="转格式"></a>转格式</h2><p><code>ffmpeg -i test.mp4 -vcodec copy -acodec copy test.flv</code></p><p>音频、视频都直接 copy，只是将 mp4 的封装格式转成了flv</p><h2 id="音视频合并"><a href="#音视频合并" class="headerlink" title="音视频合并"></a>音视频合并</h2><p><code>ffmpeg -i out.h264 -i out.aac -vcodec copy -acodec copy out.mp4</code></p><p>视频和音频直接拷贝，合成一个mp4格式文件</p><h2 id="YUV转H264"><a href="#YUV转H264" class="headerlink" title="YUV转H264"></a>YUV转H264</h2><p><code>ffmpeg -f rawvideo -pix_fmt yuv420p -s 320x240 -r 30 -i out.yuv -c:v libx264 -f rawvideo out.h264</code></p><h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><p>首先创建一个 inputs.txt 文件，文件内容如下：<br>file ‘1.flv’<br>file ‘2.flv’<br>file ‘3.flv’<br>然后执行下面的命令：<br><code>ffmpeg -f concat -i inputs.txt -c copy output.flv</code></p><h2 id="视频剪切"><a href="#视频剪切" class="headerlink" title="视频剪切"></a>视频剪切</h2><p><code>ffmpeg -ss 0:1:30 -t 0:0:20 -i input.avi -vcodec copy -acodec copy output.avi //剪切视频</code><br>-ss 开始时间<br>-t 持续时间</p><h2 id="视频缩小一倍"><a href="#视频缩小一倍" class="headerlink" title="视频缩小一倍"></a>视频缩小一倍</h2><p><code>ffmpeg -i out.mp4 -vf scale=iw/2:-1 scale.mp4</code><br>-vf scale 指定使用简单过滤器 scale，iw/2:-1 中的 iw 指定按整型取视频的宽度。 -1 表示高度随宽度一起变化。</p><h2 id="视频图片互转"><a href="#视频图片互转" class="headerlink" title="视频图片互转"></a>视频图片互转</h2><p><code>ffmpeg -i test.flv -r 1 -f image2 image-%3d.jpeg  //视频转JPEG</code><br><code>ffmpeg -i out.mp4 -ss 00:00:00 -t 10 out.gif  //视频转gif</code><br><code>ffmpeg -f image2 -i image-%3d.jpeg images.mp4 //图片转视频</code></p><h2 id="添加水印"><a href="#添加水印" class="headerlink" title="添加水印"></a>添加水印</h2><p><code>ffmpeg -i out.mp4 -vf “movie=logo.png,scale=64:48[watermask];[in][watermask] overlay=30:10 [out]” water.mp4</code></p><p>-vf中的 movie 指定logo位置。scale 指定 logo 大小。overlay 指定 logo 摆放的位置</p><h2 id="直播推流"><a href="#直播推流" class="headerlink" title="直播推流"></a>直播推流</h2><p><code>ffmpeg -re -i out.mp4 -c copy -f flv rtmp://server/live/streamName</code></p><h2 id="直播拉流保存"><a href="#直播拉流保存" class="headerlink" title="直播拉流保存"></a>直播拉流保存</h2><p><code>ffmpeg -i rtmp://server/live/streamName -c copy dump.flv</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;FFmpeg 是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。本文将简单介绍FFmpeg库的基本目录结构及其功能，然后会介绍一些常用的FFmpeg命令，了解FFmpeg到底能做些什么。&lt;/p&gt;
+&lt;h3 id=&quot;音视频基本处理流程&quot;&gt;&lt;a href=
+      
+    
+    </summary>
+    
+      <category term="音视频" scheme="http://yoursite.com/categories/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
+    
+    
+      <category term="音视频" scheme="http://yoursite.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
+    
+      <category term="FFmpeg" scheme="http://yoursite.com/tags/FFmpeg/"/>
+    
+  </entry>
   
   <entry>
     <title>FFmpeg的下载,编译和安装</title>
@@ -545,38 +573,6 @@
       <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
       <category term="指针" scheme="http://yoursite.com/tags/%E6%8C%87%E9%92%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java内存模型(JMM)</title>
-    <link href="http://yoursite.com/2018/07/31/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/"/>
-    <id>http://yoursite.com/2018/07/31/Java内存模型/</id>
-    <published>2018-07-31T11:20:28.000Z</published>
-    <updated>2018-08-01T01:54:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Java的并发采用的是共享内存模型，Java线程之间的通信总是隐式进行，整个通信过程对程序员完全透明。因此在开发过程中很可能遇到各种奇怪的内存可见性问题。</p><h1 id="JMM"><a href="#JMM" class="headerlink" title="JMM"></a>JMM</h1><p>Java线程之间的通信由Java内存模型(JMM)控制，JMM决定了一个线程对共享变量的写入何时对另一个线程可见。</p><p><img src="/2018/07/31/Java内存模型/JMM.png" alt=""></p><p>如图，线程A和线程B之间要通信的话，必须经历：</p><ol><li>线程A把本地内存A中更新过的共享变量刷新到主内存中去。</li><li>线程B到主内存中去读取线程A之前已经更新过的数据。</li></ol><p>线程A向B发送消息，而这个通信过程必须要经过主内存，JMM就是通过控制主内存与每个线程的本地内存之间的交互，来为Java程序员提供内存可见性保证。</p><p>那JMM具体是如何控制这个过程呢？我们需要认识几个基础概念：内存屏障（memory Barriers），指令重排序，<code>happens-before</code>规则，<code>as-if-serial</code>语义</p><h2 id="内存屏障"><a href="#内存屏障" class="headerlink" title="内存屏障"></a>内存屏障</h2><p>内存屏障，又称内存栅栏，是一个CPU指令，主要功能如下：</p><ol><li>保证特定操作的执行顺序</li><li>影响某些数据(或是某条指令的执行结果)的内存可见性</li></ol><p>编译器和CPU能够重排序指令，保证最终相同的结果，尝试优化性能。插入一条Memory Barrier会告诉编译器和CPU：不管什么指令都不能和这条Memory Barrier指令重排序。</p><p>Memory Barrier所做的另外一件事是强制刷出各种CPU cache，如一个 Write-Barrier（写入屏障）将刷出所有在 Barrier 之前写入 cache 的数据，因此，任何CPU上的线程都能读取到这些数据的最新版本。</p><p>在Java中，<a href="https://david1840.github.io/2018/07/28/Volatile%E5%85%B3%E9%94%AE%E5%AD%97/" target="_blank" rel="noopener">volatile</a>是基于Memory Barrier实现的。</p><h2 id="指令重排序"><a href="#指令重排序" class="headerlink" title="指令重排序"></a>指令重排序</h2><p>指令重排序是指编译器和处理器为了优化程序性能而对指令序列进行重新排序的一种手段。但是，JMM确保在不同的编译器和不同的处理器平台之上，通过插入特定类型的Memory Barrier来禁止特定类型的编译器重排序和处理器重排序，为上层提供一致的内存可见性保证。</p><ol><li>编译器优化重排序：编译器在不改变单线程程序语义的前提下，可以重新安排语句的执行顺序。</li><li>指令级并行的重排序：如果不存l在数据依赖性，处理器可以改变语句对应机器指令的执行顺序。</li><li>内存系统的重排序：处理器使用缓存和读写缓冲区，这使得加载和存储操作看上去可能是在乱序执行。</li></ol><h4 id="数据依赖性"><a href="#数据依赖性" class="headerlink" title="数据依赖性"></a>数据依赖性</h4><p>如果两个操作访问同一个变量，其中一个为写操作，此时这两个操作之间存在数据依赖性。<br><img src="/2018/07/31/Java内存模型/JMM2.png" alt=""></p><p>上面三种情况，只要重排序两个操作的执行顺序，程序的执行结果就会被改变。因此，编译器和处理器不会改变存在数据依赖性关系的两个操作的执行顺序，即不会重排序。</p><h2 id="happens-before规则"><a href="#happens-before规则" class="headerlink" title="happens-before规则"></a><code>happens-before</code>规则</h2><p>在JMM中，如果一个操作的执行结果需要对另一个操作可见，那么这两个操作之间必须要存在happens-before关系，这个的两个操作既可以在同一个线程，也可以在不同的两个线程中。</p><p>与程序员密切相关的happens-before规则如下：</p><ol><li>程序顺序规则：一个线程中的每个操作，happens-before于该线程中任意的后续操作。</li><li>监视器锁规则：对一个锁的解锁操作，happens-before于随后对这个锁的加锁操作。</li><li>volatile域规则：对一个volatile域的写操作，happens-before于任意线程后续对这个volatile域的读。</li><li>传递性规则：如果 A happens-before B，且 B happens-before C，那么A happens-before C。</li></ol><blockquote><p>两个操作之间具有happens-before关系，并不意味前一个操作必须要在后一个操作之前执行！仅仅要求前一个操作的执行结果，对于后一个操作是可见的，且前一个操作按顺序排在后一个操作之前</p></blockquote><h2 id="as-if-serial语义"><a href="#as-if-serial语义" class="headerlink" title="as-if-serial语义"></a><code>as-if-serial</code>语义</h2><p>不管怎么重排序，单线程下的执行结果不能被改变，编译器、runtime和处理器都必须遵守as-if-serial语义。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Java的并发采用的是共享内存模型，Java线程之间的通信总是隐式进行，整个通信过程对程序员完全透明。因此在开发过程中很可能遇到各种奇怪的内存可见性问题。&lt;/p&gt;
-&lt;h1 id=&quot;JMM&quot;&gt;&lt;a href=&quot;#JMM&quot; class=&quot;headerlink&quot; title=&quot;J
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://yoursite.com/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://yoursite.com/tags/Java/"/>
-    
-      <category term="多线程" scheme="http://yoursite.com/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-      <category term="同步" scheme="http://yoursite.com/tags/%E5%90%8C%E6%AD%A5/"/>
-    
-      <category term="JMM" scheme="http://yoursite.com/tags/JMM/"/>
     
   </entry>
   
