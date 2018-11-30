@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Programmer Liu</title>
   
-  <subtitle>一只有崇高理想的的程序猿</subtitle>
+  <subtitle>精彩生活，不惧挑战，做一只有理想的的程序猿</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-30T02:32:37.000Z</updated>
+  <updated>2018-11-30T07:03:24.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每日一算法之判断回文联表</title>
+    <link href="http://yoursite.com/2018/11/30/%E6%AF%8F%E6%97%A5%E4%B8%80%E7%AE%97%E6%B3%95%E4%B9%8B%E5%88%A4%E6%96%AD%E5%9B%9E%E6%96%87%E8%81%94%E8%A1%A8/"/>
+    <id>http://yoursite.com/2018/11/30/每日一算法之判断回文联表/</id>
+    <published>2018-11-30T06:36:00.000Z</published>
+    <updated>2018-11-30T07:03:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>请判断一个链表是否为回文链表。</p><p><strong>示例 1:</strong></p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="number">1</span>-&gt;<span class="number">2</span></span><br><span class="line">输出: <span class="keyword">false</span></span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="number">1</span>-&gt;<span class="number">2</span>-&gt;<span class="number">2</span>-&gt;<span class="number">1</span></span><br><span class="line">输出: <span class="keyword">true</span></span><br></pre></td></tr></table></figure><p><strong>进阶：</strong><br>你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？（<a href="https://leetcode-cn.com/problems/palindrome-linked-list/description/" target="_blank" rel="noopener">leetcode原题</a>）</p><p>拿到这个题的时候，看到给出的第二个示例以及要求O(1) 空间复杂度就知道要利用链表逆序思想，将链表后半部分逆序。然后从前到中和从后到中一一对比即可。</p><p>实现代码：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(struct ListNode* head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(head==<span class="literal">NULL</span> || head-&gt;next == <span class="literal">NULL</span>)&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">bool</span> result = <span class="literal">true</span>;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">node1</span> = <span class="title">head</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">node2</span> = <span class="title">head</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">node3</span> = <span class="title">NULL</span>;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//node2每次跳两步，node1每次跳一步，当node2-&gt;next或者node2-&gt;next-&gt;next为空时</span></span><br><span class="line">    <span class="comment">//链表个数为奇数，node1就处在中间位置，</span></span><br><span class="line">    <span class="comment">//链表个数为偶数，node1和node1-&gt;next就是中间两个位置。</span></span><br><span class="line">    <span class="keyword">while</span>(node2-&gt;next!=<span class="literal">NULL</span> &amp;&amp; node2-&gt;next-&gt;next !=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        node2 = node2-&gt;next-&gt;next;</span><br><span class="line">        node1 = node1-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//逆序后半段链表</span></span><br><span class="line">    <span class="comment">// 1-&gt;2-&gt;3-&gt;3-&gt;2-&gt;1</span></span><br><span class="line">    <span class="comment">//     转为</span></span><br><span class="line">    <span class="comment">// 1-&gt;2-&gt;3&lt;-3&lt;-2&lt;-1</span></span><br><span class="line">    node2 = node1-&gt;next;</span><br><span class="line">    node1-&gt; next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">while</span>(node2!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        node3 = node2-&gt;next;</span><br><span class="line">        node2-&gt;next = node1;</span><br><span class="line">        node1 = node2;</span><br><span class="line">        node2 = node3;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    node3 = node1;</span><br><span class="line">    node2 = head;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//从前端和后端开始对比数字</span></span><br><span class="line">    <span class="keyword">while</span>(node2!=<span class="literal">NULL</span> &amp;&amp; node1!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(node2-&gt;val != node1-&gt;val)&#123;</span><br><span class="line">            result = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        node2 = node2-&gt;next;</span><br><span class="line">        node1 = node1-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//在程序中应该把链表恢复原样，毕竟还有可能要用到这个链表，参照上面，这里就偷懒没写了</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>好久没有写算法了，为了链表的逆序在纸上画了半天才理清逻辑。。。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;请判断一个链表是否为回文链表。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight elixir&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="数据结构与算法" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Android模拟屏幕点击</title>
@@ -537,35 +564,6 @@
       <category term="同步" scheme="http://yoursite.com/tags/%E5%90%8C%E6%AD%A5/"/>
     
       <category term="AQS" scheme="http://yoursite.com/tags/AQS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Binder机制简析(四)</title>
-    <link href="http://yoursite.com/2018/08/07/Binder%E6%9C%BA%E5%88%B6%E7%AE%80%E6%9E%90-%E5%9B%9B/"/>
-    <id>http://yoursite.com/2018/08/07/Binder机制简析-四/</id>
-    <published>2018-08-07T03:23:28.000Z</published>
-    <updated>2018-08-07T11:18:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>binder在framework层，采用JNI技术来调用native(C/C++)层的binder架构，从而为上层应用程序提供服务。 看过binder系列之前的文章，我们知道native层中，binder是C/S架构，分为Bn端(Server)和Bp端(Client)。对于java层在命名与架构上非常相近，同样实现了一套IPC通信架构。</p><h2 id="framework-Binder架构图"><a href="#framework-Binder架构图" class="headerlink" title="framework Binder架构图"></a>framework Binder架构图</h2><p><img src="/2018/08/07/Binder机制简析-四/java_binder.jpg" alt=""></p><p>图解：</p><ol><li>图中红色代表整个framework层 binder架构相关组件；</li><li>图中蓝色代表Native层Binder架构相关组件；</li><li>上层framework层的Binder逻辑是建立在Native层架构基础之上的，核心逻辑都是交予Native层方法来处理。</li><li>framework层的ServiceManager类与Native层的功能并不完全对应，framework层的ServiceManager类的实现最终是通过BinderProxy传递给Native层来完成的</li></ol><h2 id="Binder完整通信流程"><a href="#Binder完整通信流程" class="headerlink" title="Binder完整通信流程"></a>Binder完整通信流程</h2><p><img src="/2018/08/07/Binder机制简析-四/binder_ipc_process.jpg" alt=""></p><p>图解:</p><ol><li>发起端线程向Binder Driver发起binder ioctl请求后, 便采用环不断talkWithDriver,此时该线程处于阻塞状态, 直到收到如下BR_XXX命令才会结束该过程.</li><li>左图中waitForResponse收到BR_TRANSACTION_COMPLETE,则直接退出循环, 则没有机会执行executeCommand()方法, 故将其颜色画为灰色. 除以上5种BR_XXX命令, 当收到其他BR命令,则都会执行executeCommand过程.</li><li>目标Binder线程创建后, 便进入joinThreadPool()方法, 采用循环不断地循环执行getAndExecuteCommand()方法, 当bwr的读写buffer都没有数据时,则阻塞在binder_thread_read的wait_event过程. 另外,正常情况下binder线程一旦创建则不会退出.</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;binder在framework层，采用JNI技术来调用native(C/C++)层的binder架构，从而为上层应用程序提供服务。 看过binder系列之前的文章，我们知道native层中，binder是C/S架构，分为Bn端(Server)和Bp端(Client)。对于
-      
-    
-    </summary>
-    
-      <category term="Android系统" scheme="http://yoursite.com/categories/Android%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
-    
-      <category term="系统" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F/"/>
-    
-      <category term="binder" scheme="http://yoursite.com/tags/binder/"/>
     
   </entry>
   
