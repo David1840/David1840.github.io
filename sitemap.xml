@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/12/06/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/</loc>
+    
+    <lastmod>2018-12-07T01:25:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/12/05/Android-JNI%E5%BC%80%E5%8F%91-LinuxC%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D/</loc>
     
     <lastmod>2018-12-05T11:04:28.000Z</lastmod>
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
+    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
     
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
     
@@ -89,13 +96,6 @@
     <loc>http://yoursite.com/2018/08/28/Netty%E5%AD%A6%E4%B9%A0-%E4%B8%80/</loc>
     
     <lastmod>2018-11-27T07:45:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2018/08/01/C-%E6%8C%87%E9%92%88%E5%AD%A6%E4%B9%A0/</loc>
-    
-    <lastmod>2018-11-27T07:42:51.000Z</lastmod>
     
   </url>
   

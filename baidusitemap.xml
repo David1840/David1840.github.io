@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2018/12/06/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/</loc>
+    <lastmod>2018-12-07T01:25:14.000Z</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2018/12/05/Android-JNI%E5%BC%80%E5%8F%91-LinuxC%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D/</loc>
     <lastmod>2018-12-05T11:04:28.000Z</lastmod>
   </url>  <url>
@@ -16,10 +19,10 @@
     <loc>http://yoursite.com/2018/12/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E7%AE%97%E6%B3%95%E4%B9%8B%E5%A5%87%E5%81%B6%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2018-12-03T12:09:30.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
+    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/11/30/%E6%AF%8F%E6%97%A5%E4%B8%80%E7%AE%97%E6%B3%95%E4%B9%8B%E5%88%A4%E6%96%AD%E5%9B%9E%E6%96%87%E8%81%94%E8%A1%A8/</loc>
@@ -39,9 +42,6 @@
   </url>  <url>
     <loc>http://yoursite.com/2018/08/28/Netty%E5%AD%A6%E4%B9%A0-%E4%B8%80/</loc>
     <lastmod>2018-11-27T07:45:44.000Z</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2018/08/01/C-%E6%8C%87%E9%92%88%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-11-27T07:42:51.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/11/23/FFmpeg%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9B%B4%E6%92%AD%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2018-11-23T02:43:31.000Z</lastmod>
