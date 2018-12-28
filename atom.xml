@@ -45,24 +45,6 @@
   </entry>
   
   <entry>
-    <title>YUV数据格式解惑</title>
-    <link href="http://yoursite.com/2018/12/28/YUV%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%83%91/"/>
-    <id>http://yoursite.com/2018/12/28/YUV数据格式解惑/</id>
-    <published>2018-12-28T06:45:00.000Z</published>
-    <updated>2018-12-28T06:58:36.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="FFmpeg" scheme="http://yoursite.com/categories/FFmpeg/"/>
-    
-    
-      <category term="音视频" scheme="http://yoursite.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Android Image类简析(YUV_420_888)</title>
     <link href="http://yoursite.com/2018/12/28/Android-Image%E7%B1%BB%E7%AE%80%E6%9E%90-YUV-420-888/"/>
     <id>http://yoursite.com/2018/12/28/Android-Image类简析-YUV-420-888/</id>
@@ -82,10 +64,10 @@
   
   <entry>
     <title>Android Camera2预览及YUV数据获取</title>
-    <link href="http://yoursite.com/2018/12/28/Android-Camera2%E9%A2%84%E8%A7%88%E5%8F%8AYUV%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/"/>
-    <id>http://yoursite.com/2018/12/28/Android-Camera2预览及YUV数据获取/</id>
-    <published>2018-12-28T06:27:01.000Z</published>
-    <updated>2018-12-28T06:58:36.000Z</updated>
+    <link href="http://yoursite.com/2018/12/26/Android-Camera2%E9%A2%84%E8%A7%88%E5%8F%8AYUV%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2018/12/26/Android-Camera2预览及YUV数据获取/</id>
+    <published>2018-12-26T06:27:01.000Z</published>
+    <updated>2018-12-28T07:21:46.000Z</updated>
     
     <summary type="html">
     
@@ -100,10 +82,10 @@
   
   <entry>
     <title>C语言回调函数</title>
-    <link href="http://yoursite.com/2018/12/26/C%E8%AF%AD%E8%A8%80%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2018/12/26/C语言回调函数/</id>
-    <published>2018-12-26T06:48:51.000Z</published>
-    <updated>2018-12-28T07:04:30.000Z</updated>
+    <link href="http://yoursite.com/2018/12/23/C%E8%AF%AD%E8%A8%80%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2018/12/23/C语言回调函数/</id>
+    <published>2018-12-23T06:48:51.000Z</published>
+    <updated>2018-12-28T07:21:46.000Z</updated>
     
     <summary type="html">
     
@@ -113,6 +95,24 @@
     
     
       <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YUV数据格式解惑</title>
+    <link href="http://yoursite.com/2018/12/20/YUV%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%83%91/"/>
+    <id>http://yoursite.com/2018/12/20/YUV数据格式解惑/</id>
+    <published>2018-12-20T06:45:00.000Z</published>
+    <updated>2018-12-28T07:21:46.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="FFmpeg" scheme="http://yoursite.com/categories/FFmpeg/"/>
+    
+    
+      <category term="音视频" scheme="http://yoursite.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
     
   </entry>
   
