@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-28T08:19:41.000Z</updated>
+  <updated>2018-12-28T08:49:23.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,15 @@
     <link href="http://yoursite.com/2019/01/05/%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%92%8CMakefile%E7%9F%A5%E8%AF%86/"/>
     <id>http://yoursite.com/2019/01/05/安卓程序员需要知道的交叉编译和Makefile知识/</id>
     <published>2019-01-05T07:54:16.000Z</published>
-    <updated>2018-12-28T08:19:41.000Z</updated>
+    <updated>2018-12-28T08:49:23.000Z</updated>
     
     <summary type="html">
     
     </summary>
     
       <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
+    
+      <category term="C/C++" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/C-C/"/>
     
     
       <category term="交叉编译" scheme="http://yoursite.com/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/"/>
@@ -127,7 +129,7 @@
     <link href="http://yoursite.com/2018/12/20/YUV%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%83%91/"/>
     <id>http://yoursite.com/2018/12/20/YUV数据格式解惑/</id>
     <published>2018-12-20T06:45:00.000Z</published>
-    <updated>2018-12-28T07:21:46.000Z</updated>
+    <updated>2018-12-28T08:49:23.000Z</updated>
     
     <summary type="html">
     
