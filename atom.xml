@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-28T07:04:30.000Z</updated>
+  <updated>2018-12-28T08:19:41.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>安卓程序员需要知道的交叉编译和Makefile知识</title>
+    <link href="http://yoursite.com/2019/01/05/%E5%AE%89%E5%8D%93%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%92%8CMakefile%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yoursite.com/2019/01/05/安卓程序员需要知道的交叉编译和Makefile知识/</id>
+    <published>2019-01-05T07:54:16.000Z</published>
+    <updated>2018-12-28T08:19:41.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="交叉编译" scheme="http://yoursite.com/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/"/>
+    
+      <category term="Makefile" scheme="http://yoursite.com/tags/Makefile/"/>
+    
+  </entry>
+  
+  <entry>
     <title>FFmpeg代码实现Camera2 rtmp推流直播</title>
     <link href="http://yoursite.com/2019/01/03/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0Camera2-rtmp%E6%8E%A8%E6%B5%81%E7%9B%B4%E6%92%AD/"/>
     <id>http://yoursite.com/2019/01/03/FFmpeg代码实现Camera2-rtmp推流直播/</id>
     <published>2019-01-03T03:15:04.000Z</published>
-    <updated>2018-12-28T07:04:30.000Z</updated>
+    <updated>2018-12-28T08:19:41.000Z</updated>
     
     <content type="html"><![CDATA[<p>作为一个Android开发，老本行还是不能丢，所以将FFmpeg移植到Android平台上，然后自己做了一个摄像头直播的Demo，里面涉及到的知识点还是非常多的，这篇博客就一点点讲一下我是如何完成这个Demo的，做个记录，也希望能对阅读到这篇博客的朋友有所帮助。</p><pre><code>如发现博客中的错误，欢迎留言指出，共同学习。</code></pre><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="1、FFmpeg编译移植Android平台"><a href="#1、FFmpeg编译移植Android平台" class="headerlink" title="1、FFmpeg编译移植Android平台"></a>1、FFmpeg编译移植Android平台</h3><h3 id="2、YUV数据"><a href="#2、YUV数据" class="headerlink" title="2、YUV数据"></a>2、YUV数据</h3><h3 id="3、RTMP服务器搭建"><a href="#3、RTMP服务器搭建" class="headerlink" title="3、RTMP服务器搭建"></a>3、RTMP服务器搭建</h3><h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><h3 id="1、Camrea2预览与数据获取"><a href="#1、Camrea2预览与数据获取" class="headerlink" title="1、Camrea2预览与数据获取"></a>1、Camrea2预览与数据获取</h3><h3 id="2、初始化FFmpeg"><a href="#2、初始化FFmpeg" class="headerlink" title="2、初始化FFmpeg"></a>2、初始化FFmpeg</h3><h3 id="3、推送数据"><a href="#3、推送数据" class="headerlink" title="3、推送数据"></a>3、推送数据</h3><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.cnblogs.com/azraelly/archive/2013/01/01/2841269.html" target="_blank" rel="noopener">图文详解YUV420数据格式</a></p><p><a href="https://www.polarxiong.com/archives/Android-Image%E7%B1%BB%E6%B5%85%E6%9E%90-%E7%BB%93%E5%90%88YUV_420_888.html" target="_blank" rel="noopener">Android Image类浅析(结合YUV_420_888)</a></p>]]></content>
     
@@ -37,6 +57,8 @@
     
       <category term="FFmpeg" scheme="http://yoursite.com/categories/FFmpeg/"/>
     
+    
+      <category term="直播" scheme="http://yoursite.com/tags/%E7%9B%B4%E6%92%AD/"/>
     
       <category term="音视频" scheme="http://yoursite.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
     
@@ -67,7 +89,7 @@
     <link href="http://yoursite.com/2018/12/26/Android-Camera2%E9%A2%84%E8%A7%88%E5%8F%8AYUV%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/"/>
     <id>http://yoursite.com/2018/12/26/Android-Camera2预览及YUV数据获取/</id>
     <published>2018-12-26T06:27:01.000Z</published>
-    <updated>2018-12-28T07:21:46.000Z</updated>
+    <updated>2018-12-28T08:19:41.000Z</updated>
     
     <summary type="html">
     
@@ -77,6 +99,8 @@
     
     
       <category term="Camera2" scheme="http://yoursite.com/tags/Camera2/"/>
+    
+      <category term="直播" scheme="http://yoursite.com/tags/%E7%9B%B4%E6%92%AD/"/>
     
   </entry>
   
@@ -488,34 +512,6 @@
       
         &lt;p&gt;今天先来了解下FFmpeg中我们常用的结构体和方法，防止我们在后面看代码、写代码的时候一脸懵逼。&lt;/p&gt;
 &lt;h2 id=&quot;常用结构体&quot;&gt;&lt;a href=&quot;#常用结构体&quot; class=&quot;headerlink&quot; title=&quot;常用结构体&quot;&gt;&lt;/a&gt;常用结构体&lt;/h2&gt;&lt;h3 i
-      
-    
-    </summary>
-    
-      <category term="FFmpeg" scheme="http://yoursite.com/categories/FFmpeg/"/>
-    
-    
-      <category term="音视频" scheme="http://yoursite.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
-    
-      <category term="FFmpeg" scheme="http://yoursite.com/tags/FFmpeg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FFmpeg实现简单直播系统</title>
-    <link href="http://yoursite.com/2018/11/23/FFmpeg%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9B%B4%E6%92%AD%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://yoursite.com/2018/11/23/FFmpeg实现简单直播系统/</id>
-    <published>2018-11-23T01:48:29.000Z</published>
-    <updated>2018-12-28T07:04:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>现在市面上的各种直播应用越来越多，直播相关技术也成为最火热的技术方向之一，所以今天就用FFpmeg来实现一个简单的直播系统。</p><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>FFmpeg之前也看到它有直播推流和直播拉流的命令，那这个流推到哪里?又要从哪里拉?这个时候就需要我们的关键角色–<strong>流媒体服务器</strong>。</p><p>我使用Nginx服务，并配置好RTMP服务。</p><p><code>brew install nginx-full --with-rtmp-module</code></p><p>等安装完成后修改配置文件</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">vi <span class="meta-keyword">/usr/</span>local<span class="meta-keyword">/etc/</span>nginx/nginx.conf</span><br><span class="line"></span><br><span class="line">添加如下:</span><br><span class="line"></span><br><span class="line"><span class="class">rtmp </span>&#123;</span><br><span class="line">      server&#123;</span><br><span class="line"></span><br><span class="line">            listen <span class="number">1935</span>; <span class="comment">//端口号</span></span><br><span class="line">            chunk_size <span class="number">4000</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//指定流应用</span></span><br><span class="line">            application live</span><br><span class="line">           &#123;</span><br><span class="line">                 live on;</span><br><span class="line">                 record off;</span><br><span class="line">                 allow play all;</span><br><span class="line">           &#125;</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>最后重启服务</p><p><code>nginx -s reload</code></p><h2 id="直播"><a href="#直播" class="headerlink" title="直播"></a>直播</h2><p>环境Ok了，接下来就可以试一下推流拉流直播了。</p><p>首先可以推一个视频</p><p><code>ffmpeg -re -i out.mp4 -c copy -f flv rtmp://127.0.0.1:1935/live/room</code></p><p>使用FFplay播放</p><p><code>ffplay rtmp://localhost:1935/live/room</code></p><p><img src="/2018/11/23/FFmpeg实现简单直播系统/ffmpeglive.png" alt=""></p><p>图片左侧是推流，右侧ffplay拉流，中间为ffplay播放的视频。</p><p>然后可以试着直播下我的桌面:</p><p><code>ffmpeg -f avfoundation -i &quot;1&quot; -vcodec libx264 -preset ultrafast -acodec libfaac -f flv rtmp://127.0.0.1:1935/live/room</code></p><p>都是同样的原理，很简单，赶紧去试一下吧!</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;现在市面上的各种直播应用越来越多，直播相关技术也成为最火热的技术方向之一，所以今天就用FFpmeg来实现一个简单的直播系统。&lt;/p&gt;
-&lt;h2 id=&quot;环境搭建&quot;&gt;&lt;a href=&quot;#环境搭建&quot; class=&quot;headerlink&quot; title=&quot;环境搭建&quot;&gt;&lt;/a&gt;环境搭建
       
     
     </summary>
