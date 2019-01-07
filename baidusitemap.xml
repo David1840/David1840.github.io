@@ -2,16 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://yoursite.com/2019/01/04/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%B8%80-Camera2-API%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2019-01-07T02:48:37.000Z</lastmod>
+    <lastmod>2019-01-07T06:22:38.000Z</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2019/01/06/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%BA%8C-%E9%9F%B3%E9%A2%91AudioRecord%E5%92%8CAudioTrack/</loc>
+    <lastmod>2019-01-07T06:22:38.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/01/02/FFmpeg%E3%80%81H264%E7%BC%96%E8%AF%91Android%E5%B9%B3%E5%8F%B0/</loc>
     <lastmod>2019-01-05T06:42:31.000Z</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/01/10/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%B8%89-FFmpeg-Camera2%E6%8E%A8%E6%B5%81%E7%9B%B4%E6%92%AD/</loc>
-    <lastmod>2019-01-03T07:03:17.000Z</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2019/01/06/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%BA%8C-%E4%BD%BF%E7%94%A8FFmpeg%E5%BD%95%E5%88%B6%E8%A7%86%E9%A2%91/</loc>
-    <lastmod>2019-01-03T07:03:03.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/12/20/YUV%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E4%B8%8EYUV_420_888/</loc>
     <lastmod>2019-01-03T06:45:43.000Z</lastmod>
@@ -31,10 +28,13 @@
     <loc>http://yoursite.com/2018/12/06/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
+    <loc>http://yoursite.com/2018/11/27/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%8A%BD%E5%8F%96%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91%E6%95%B0%E6%8D%AE/</loc>
+    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2018/11/19/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/11/27/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%8A%BD%E5%8F%96%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91%E6%95%B0%E6%8D%AE/</loc>
+    <loc>http://yoursite.com/2018/12/07/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%9C%80%E7%AE%80%E7%89%88%E6%9C%AC%E5%B0%8F%E5%92%96%E7%A7%80/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/12/05/FFmpeg%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%B6%E9%97%B4%E5%9F%BA/</loc>
@@ -50,9 +50,6 @@
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/12/10/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E8%BD%AC%E5%9B%BE%E7%89%87/</loc>
-    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2018/12/07/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%9C%80%E7%AE%80%E7%89%88%E6%9C%AC%E5%B0%8F%E5%92%96%E7%A7%80/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/12/05/Android-JNI%E5%BC%80%E5%8F%91-LinuxC%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D/</loc>
