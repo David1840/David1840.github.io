@@ -51,13 +51,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2019/01/02/FFmpeg%E3%80%81H264%E7%BC%96%E8%AF%91Android%E5%B9%B3%E5%8F%B0/</loc>
-    
-    <lastmod>2019-01-05T06:42:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/12/20/YUV%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E4%B8%8EYUV_420_888/</loc>
     
     <lastmod>2019-01-03T06:45:43.000Z</lastmod>
@@ -89,6 +82,13 @@
     <loc>http://yoursite.com/2018/11/21/Mac%E4%B8%8BFFmpeg%E7%9A%84%E4%B8%8B%E8%BD%BD-%E7%BC%96%E8%AF%91%E5%92%8C%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2018-12-28T07:04:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/12/05/FFmpeg%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%B6%E9%97%B4%E5%9F%BA/</loc>
+    
+    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
     
   </url>
   
@@ -142,13 +142,6 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/12/05/FFmpeg%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4%E6%88%B3%E4%B8%8E%E6%97%B6%E9%97%B4%E5%9F%BA/</loc>
-    
-    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2018/12/05/Android-JNI%E5%BC%80%E5%8F%91-LinuxC%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D/</loc>
     
     <lastmod>2018-12-05T11:04:28.000Z</lastmod>
@@ -177,14 +170,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
+    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
     
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
     
