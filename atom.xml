@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-12-07T07:51:53.740Z</updated>
+  <updated>2020-12-02T07:42:32.373Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,20 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>LINUX设备驱动程序(一)</title>
-    <link href="http://yoursite.com/2020/12/07/LINUX%E8%AE%BE%E5%A4%87%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F-%E4%B8%80/"/>
-    <id>http://yoursite.com/2020/12/07/LINUX设备驱动程序-一/</id>
-    <published>2020-12-07T07:51:53.000Z</published>
-    <updated>2020-12-07T07:51:53.740Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Android智能指针</title>
@@ -541,6 +527,36 @@
       <category term="OpenGL ES" scheme="http://yoursite.com/tags/OpenGL-ES/"/>
     
       <category term="音视频" scheme="http://yoursite.com/tags/%E9%9F%B3%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android JNI开发--JNI返回Java对象</title>
+    <link href="http://yoursite.com/2019/08/20/Android-JNI%E5%BC%80%E5%8F%91-JNI%E8%BF%94%E5%9B%9EJava%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com/2019/08/20/Android-JNI开发-JNI返回Java对象/</id>
+    <published>2019-08-20T02:32:37.000Z</published>
+    <updated>2019-08-29T15:55:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨天同事问我一个JNI问题，想从Native代码中返回一个Java对象，但是网上找的例子运行就崩溃了。仔细一想，我好想也没做过这样的操作，赶紧学习一下。</p><p>从Native层返回一个Java对象，有两种操作</p><ol><li>传入一个创建好的Java对象，只在JNI代码中做赋值操作并返回</li><li>完全在JNI代码中新建一个对象，赋值并返回</li></ol><h5 id="创建一个Person类"><a href="#创建一个Person类" class="headerlink" title="创建一个Person类"></a>创建一个Person类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="Native方法"><a href="#Native方法" class="headerlink" title="Native方法"></a>Native方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法1 从Java层传入一个对象</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">native</span> Person <span class="title">getPerson</span><span class="params">(Person person)</span></span>;</span><br><span class="line"><span class="comment">//方法2 完全从Native代码中创建对象</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">native</span> Person <span class="title">getPerson2</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure><h5 id="C-代码"><a href="#C-代码" class="headerlink" title="C++代码"></a>C++代码</h5><h6 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span></span><br><span class="line">JNIEXPORT jobject JNICALL</span><br><span class="line">Java_com_myapplication_MainActivity_getPerson(JNIEnv *env, jobject instance,</span><br><span class="line">                                                      jobject person) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 找到对象的Java类</span></span><br><span class="line">    jclass myClass = env-&gt;FindClass(<span class="string">"com/myapplication/Person"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对应的Java属性</span></span><br><span class="line">    jfieldID name = env-&gt;GetFieldID(myClass, <span class="string">"name"</span>, <span class="string">"Ljava/lang/String;"</span>);</span><br><span class="line">    jfieldID age = env-&gt;GetFieldID(myClass, <span class="string">"age"</span>, <span class="string">"I"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//属性赋值，person为传入的Java对象</span></span><br><span class="line">    env-&gt;SetObjectField(person, name, env-&gt;NewStringUTF(<span class="string">"liuwei"</span>));</span><br><span class="line">    env-&gt;SetIntField(person, age, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> person;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h6 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h6><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extern</span> <span class="string">"C"</span></span><br><span class="line">JNIEXPORT jobject JNICALL</span><br><span class="line">Java_com_myapplication_MainActivity_getPerson2(JNIEnv *env, jobject instance) &#123;</span><br><span class="line">   </span><br><span class="line">    jclass myClass = env-&gt;FindClass(<span class="string">"com/myapplication/Person"</span>);</span><br><span class="line">    <span class="comment">// 获取类的构造函数，记住这里是调用无参的构造函数</span></span><br><span class="line">    jmethodID id = env-&gt;GetMethodID(myClass, <span class="string">"&lt;init&gt;"</span>, <span class="string">"()V"</span>);</span><br><span class="line">    <span class="comment">// 创建一个新的对象</span></span><br><span class="line">    jobject person_ = env-&gt;NewObject(myClass, id);</span><br><span class="line">    </span><br><span class="line">    jfieldID name = env-&gt;GetFieldID(myClass, <span class="string">"name"</span>, <span class="string">"Ljava/lang/String;"</span>);</span><br><span class="line">    jfieldID age = env-&gt;GetFieldID(myClass, <span class="string">"age"</span>, <span class="string">"I"</span>);</span><br><span class="line"></span><br><span class="line">    env-&gt;SetObjectField(person_, name, env-&gt;NewStringUTF(<span class="string">"liuwei"</span>));</span><br><span class="line">    env-&gt;SetIntField(person_, age, <span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> person_;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>可以看到，方法1和方法2的代码区别就2行</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 获取类的构造函数，记住这里是调用无参的构造函数</span></span><br><span class="line">jmethodID id = env-&gt;GetMethodID(myClass, <span class="string">"&lt;init&gt;"</span>, <span class="string">"()V"</span>);</span><br><span class="line"><span class="comment">// 创建一个新的对象</span></span><br><span class="line">jobject person_ = env-&gt;NewObject(myClass, id);</span><br></pre></td></tr></table></figure><p>在开发时 <code>env-&gt;GetMethodID(myClass, &quot;&lt;init&gt;&quot;, &quot;()V&quot;);</code>很可能会在写代码是标红，提示无法找到<code>&lt;init&gt;</code>,不需要理会，直接编译就好了。</p><h5 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">TextView tv = findViewById(R.id.sample_text);</span><br><span class="line"></span><br><span class="line">Person person = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="comment">//传入Java对象，返回的也是同一个对象</span></span><br><span class="line">getPerson(person);</span><br><span class="line"></span><br><span class="line">tv.setText(person.getName() <span class="comment">// 方法1</span></span><br><span class="line">           + <span class="string">" : "</span> +</span><br><span class="line">           getPerson2().getAge() <span class="comment">// 方法2</span></span><br><span class="line">    );</span><br></pre></td></tr></table></figure><p>搞定！又学习了一个知识点。</p><p>对了，同事代码崩溃的问题就是Java层用了方法2，但是JNI代码却用了方法1，没有创建出一个对象，导致崩溃。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;昨天同事问我一个JNI问题，想从Native代码中返回一个Java对象，但是网上找的例子运行就崩溃了。仔细一想，我好想也没做过这样的操作，赶紧学习一下。&lt;/p&gt;
+&lt;p&gt;从Native层返回一个Java对象，有两种操作&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;传入一个创建好的Java对象，
+      
+    
+    </summary>
+    
+      <category term="Android开发" scheme="http://yoursite.com/categories/Android%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="JNI" scheme="http://yoursite.com/tags/JNI/"/>
+    
+      <category term="NDK" scheme="http://yoursite.com/tags/NDK/"/>
     
   </entry>
   
