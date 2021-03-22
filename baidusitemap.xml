@@ -130,10 +130,10 @@
     <loc>http://yoursite.com/2019/04/22/FFmpeg-SDL2%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E6%B5%81%E6%92%AD%E6%94%BE/</loc>
     <lastmod>2019-04-26T07:29:22.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/04/26/FFmpeg-SDL2%E5%AE%9E%E7%8E%B0%E9%9F%B3%E9%A2%91%E6%B5%81%E6%92%AD%E6%94%BE/</loc>
+    <loc>http://yoursite.com/2019/04/19/SDL2%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE/</loc>
     <lastmod>2019-04-26T07:28:53.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/04/19/SDL2%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE/</loc>
+    <loc>http://yoursite.com/2019/04/26/FFmpeg-SDL2%E5%AE%9E%E7%8E%B0%E9%9F%B3%E9%A2%91%E6%B5%81%E6%92%AD%E6%94%BE/</loc>
     <lastmod>2019-04-26T07:28:53.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/04/16/SDL2%E7%BA%B9%E7%90%86%E6%B8%B2%E6%9F%93/</loc>
@@ -142,16 +142,16 @@
     <loc>http://yoursite.com/2019/04/15/SDL2%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/</loc>
     <lastmod>2019-04-20T08:31:45.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/02/14/Android-JNI%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
+    <loc>http://yoursite.com/2019/02/13/Android-native%E5%B1%82%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDso%E5%BA%93/</loc>
     <lastmod>2019-02-16T06:01:22.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/02/11/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%BA%94-OpenSL-ES%E6%92%AD%E6%94%BE%E9%9F%B3%E9%A2%91/</loc>
+    <loc>http://yoursite.com/2019/02/14/Android-JNI%E5%AD%A6%E4%B9%A0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2019-02-16T06:01:22.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2019/02/14/Android-JNI%E5%AD%A6%E4%B9%A0-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</loc>
     <lastmod>2019-02-16T06:01:22.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/02/13/Android-native%E5%B1%82%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BDso%E5%BA%93/</loc>
+    <loc>http://yoursite.com/2019/02/11/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%BA%94-OpenSL-ES%E6%92%AD%E6%94%BE%E9%9F%B3%E9%A2%91/</loc>
     <lastmod>2019-02-16T06:01:22.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/11/22/FFmpeg%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
@@ -166,10 +166,10 @@
     <loc>http://yoursite.com/2018/08/02/Binder%E6%9C%BA%E5%88%B6%E7%AE%80%E6%9E%90-%E4%B8%80/</loc>
     <lastmod>2019-01-10T03:59:25.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/01/04/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%B8%80-Camera2-API%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE/</loc>
+    <loc>http://yoursite.com/2019/01/06/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%BA%8C-%E9%9F%B3%E9%A2%91AudioRecord%E5%92%8CAudioTrack/</loc>
     <lastmod>2019-01-07T06:22:38.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2019/01/06/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%BA%8C-%E9%9F%B3%E9%A2%91AudioRecord%E5%92%8CAudioTrack/</loc>
+    <loc>http://yoursite.com/2019/01/04/Android%E9%9F%B3%E8%A7%86%E9%A2%91-%E4%B8%80-Camera2-API%E9%87%87%E9%9B%86%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2019-01-07T06:22:38.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/12/20/YUV%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E4%B8%8EYUV_420_888/</loc>
@@ -181,31 +181,31 @@
     <loc>http://yoursite.com/2018/12/23/C%E8%AF%AD%E8%A8%80%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2019-01-03T02:27:41.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/11/23/FFmpeg%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9B%B4%E6%92%AD%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2018-12-28T07:04:30.000Z</lastmod>
-  </url>  <url>
     <loc>http://yoursite.com/2018/11/21/Mac%E4%B8%8BFFmpeg%E7%9A%84%E4%B8%8B%E8%BD%BD-%E7%BC%96%E8%AF%91%E5%92%8C%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-12-28T07:04:30.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/11/27/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%8A%BD%E5%8F%96%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
+    <loc>http://yoursite.com/2018/11/23/FFmpeg%E5%AE%9E%E7%8E%B0%E7%AE%80%E5%8D%95%E7%9B%B4%E6%92%AD%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2018-12-28T07:04:30.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/12/06/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/</loc>
-    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
-  </url>  <url>
-    <loc>http://yoursite.com/2018/11/19/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</loc>
+    <loc>http://yoursite.com/2018/12/10/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E8%BD%AC%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/12/07/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%9C%80%E7%AE%80%E7%89%88%E6%9C%AC%E5%B0%8F%E5%92%96%E7%A7%80/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
+    <loc>http://yoursite.com/2018/12/06/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91/</loc>
+    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2018/12/18/Linux%E4%B8%AD%E6%96%AD%E5%92%8C%E4%B8%AD%E6%96%AD%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2018-12-28T06:58:36.000Z</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2018/11/27/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%8A%BD%E5%8F%96%E9%9F%B3%E9%A2%91%E3%80%81%E8%A7%86%E9%A2%91%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/11/23/FFmpeg%E5%B8%B8%E7%94%A8%E7%BB%93%E6%9E%84%E4%BD%93%E3%80%81%E6%96%B9%E6%B3%95%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/12/10/FFmpeg%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E8%A7%86%E9%A2%91%E8%BD%AC%E5%9B%BE%E7%89%87/</loc>
+    <loc>http://yoursite.com/2018/11/19/%E9%9F%B3%E8%A7%86%E9%A2%91%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2018-12-28T06:58:36.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/12/05/Android-JNI%E5%BC%80%E5%8F%91-LinuxC%E7%A8%8B%E5%BA%8F%E7%A7%BB%E6%A4%8D/</loc>
@@ -220,10 +220,10 @@
     <loc>http://yoursite.com/2018/12/03/%E6%AF%8F%E6%97%A5%E4%B8%80%E7%AE%97%E6%B3%95%E4%B9%8B%E5%A5%87%E5%81%B6%E9%93%BE%E8%A1%A8/</loc>
     <lastmod>2018-12-03T12:09:30.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
   </url>  <url>
-    <loc>http://yoursite.com/2018/12/03/Android-JNI%E5%AD%A6%E4%B9%A0-LOG/</loc>
+    <loc>http://yoursite.com/2018/08/17/Android-JNI%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2018-12-03T03:17:40.000Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/11/30/%E6%AF%8F%E6%97%A5%E4%B8%80%E7%AE%97%E6%B3%95%E4%B9%8B%E5%88%A4%E6%96%AD%E5%9B%9E%E6%96%87%E8%81%94%E8%A1%A8/</loc>
